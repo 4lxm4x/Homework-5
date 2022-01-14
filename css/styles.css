@@ -126,18 +126,15 @@ img {
   margin-right: 10px;
 }
 
-.tel {
+.tel,
+.mail .nav-bar {
   color: var(--text-color);
 }
 
 .active,
-.nav-bar:hover,
-.nav-bar:focus {
+.main-nav .nav-bar:hover,
+.main-nav .nav-bar:focus {
   color: var(--accent-color);
-}
-
-.envelope:hover .icon {
-  fill: var(--accent-color);
 }
 
 .nav-bar.active::after {
@@ -150,6 +147,23 @@ img {
   position: absolute;
   bottom: 0;
   background-color: var(--accent-color);
+}
+
+.mail,
+.telephone {
+  display: flex;
+}
+
+.mail:hover .icon,
+.mail:hover .nav-bar,
+.mail .nav-bar:focus,
+.mail .nav-bar:focus,
+.telephone:hover .icon,
+.telephone:hover .nav-bar,
+.telephone .nav-bar:focus,
+.telephone .nav-bar:focus {
+  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* HERO */
@@ -186,7 +200,8 @@ img {
 }
 
 .hero .button,
-footer .button {
+footer .button,
+.modal .button {
   border: none;
   border-radius: 4px;
   width: 200px;
@@ -333,12 +348,14 @@ footer .button {
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
 
 .business .list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .business .list > li {
@@ -378,8 +395,6 @@ footer .button {
   margin-bottom: 30px;
 } */
 
-.business p {
-}
 .business .section-header {
   margin-bottom: 50px;
 }
@@ -788,4 +803,51 @@ address {
 .filter.list {
   display: flex;
   justify-content: center;
+}
+
+/* Backdrop and modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  z-index: 100;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  display: block;
+  position: absolute;
+
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+
+  background-color: #fff;
+  /* opacity: 1; */
+  transform: translate(-50%, -50%) scale(1) rotateX(360deg) perspective(400px);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  /* opacity: 0; */
+  transform: translate(-50%, -50%) scale(0.1);
+}
+
+.modal .button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
