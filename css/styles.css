@@ -156,12 +156,12 @@ img {
 
 .mail:hover .icon,
 .mail:hover .nav-bar,
-.mail .nav-bar:focus,
-.mail .nav-bar:focus,
+.mail .nav-bar:focus-within,
+.mail .nav-bar:focus-within,
 .telephone:hover .icon,
 .telephone:hover .nav-bar,
-.telephone .nav-bar:focus,
-.telephone .nav-bar:focus {
+.telephone .nav-bar:focus-within,
+.telephone .nav-bar:focus-within {
   fill: var(--accent-color);
   color: var(--accent-color);
 }
@@ -632,7 +632,33 @@ address {
 }
 
 .footer-subscribe .button {
-  margin-left: 370px;
+  margin-left: 12px;
+}
+
+.subscribe-form .button:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon-send.svg);
+  margin-left: 10px;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.form-input {
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 16px;
+  color: inherit;
 }
 
 /* PORTFOLIO */
@@ -838,6 +864,22 @@ address {
   /* opacity: 1; */
   transform: translate(-50%, -50%) scale(1) perspective(400px) rotateX(360deg);
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
 }
 
 .backdrop.is-hidden .modal {

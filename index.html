@@ -54,7 +54,16 @@
     <div class="backdrop is-hidden" data-modal>
     
         <div class="modal">
-            <button class="button" type="button" data-modal-close>Отправить</button>
+            <p>Оставьте свои данные, мы Вам перезвоним</p>
+            <div class="close-button" data-modal-close>
+            <svg width="30px" height="30px">
+                <use href="images/close-button.svg#button-close">
+
+                </use>
+
+            </svg>
+        </div>
+            <button class="button" type="submit">Отправить</button>
         </div>
     </div>
 
@@ -285,8 +294,14 @@
             </ul>
         </div>
         <div class="footer-subscribe">
+                    
                     <p class="footer-appeal">Подпишитесь на рассылку</p>
-                    <button class="button" type="button">Подписаться</button>
+                    <div class="subscribe-form">
+                        <form class="form">
+                            <input class="form-input" type="email" placeholder="E-mail">
+                        </form>
+                        <button class="button" type="button">Подписаться</button>
+                    </div>
         </div>
 
     </footer>
