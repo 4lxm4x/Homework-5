@@ -854,6 +854,7 @@ address {
 .modal {
   display: block;
   position: absolute;
+  padding: 40px;
 
   width: 528px;
   height: 581px;
@@ -892,4 +893,14 @@ address {
   bottom: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
 }
