@@ -977,3 +977,28 @@ address {
   transform: translateY(-40px);
   color: var(--accent-color);
 }
+
+.form .icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  /* outline: 1px solid red; */
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+}
+
+.form-icon {
+  background-size: contain;
+  fill: #212121;
+}
+
+.input-form:focus ~ .icon .form-icon {
+  fill: #2196f3;
+}
+
+.input-form:focus-visible {
+  outline: 0;
+}
