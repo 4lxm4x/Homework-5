@@ -205,7 +205,7 @@ img {
 
 .hero .button,
 footer .button,
-.modal .button {
+.modal .submit.button {
   border: none;
   border-radius: 4px;
   width: 200px;
@@ -745,10 +745,6 @@ address {
   transform: translateY(-100%);
 }
 
-.project a {
-  /* background-color: tomato; */
-}
-
 .project:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -885,6 +881,11 @@ address {
   padding: 0;
   margin: 0;
   border-collapse: collapse;
+  cursor: pointer;
+}
+
+.close-button-icon:hover {
+  fill: var(--accent-color);
 }
 
 .backdrop.is-hidden .modal {
@@ -892,11 +893,11 @@ address {
   transform: translate(-50%, -50%) scale(0.1);
 }
 
-.modal .button {
+.modal .submit.button {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 
 .modal-title {
@@ -907,4 +908,72 @@ address {
   letter-spacing: 0.03em;
 
   color: #212121;
+}
+.form {
+  position: relative;
+}
+.input-form {
+  width: 100%;
+  padding: 0;
+  padding-left: 42px;
+  height: 40px;
+  margin: 0;
+  /* margin-bottom: 28px; */
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input-form:focus {
+  border-color: var(--accent-color);
+}
+
+.input {
+  position: relative;
+  display: block;
+  /* outline: 1px solid red; */
+  padding: 0;
+  padding-left: 0px;
+  margin: 0;
+  /* height: 40px; */
+  margin-bottom: 28px;
+}
+
+.form-label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+.input-form:focus + .form-label,
+.input-form:not(:placeholder-shown) + .form-label {
+  transform: translateY(-40px);
+  color: var(--accent-color);
+}
+
+.comment-textarea {
+  padding: 12px 12px 16px 16px;
+  width: 100%;
+
+  resize: none;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.textarea {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transition: transform 250ms linear;
+}
+
+.comment-textarea:focus + .textarea,
+.comment-textarea:not(:placeholder-shown) + .textarea {
+  transform: translateY(-40px);
+  color: var(--accent-color);
 }

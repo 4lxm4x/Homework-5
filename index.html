@@ -56,14 +56,46 @@
         <div class="modal">
             <p class="modal-title">Оставьте свои данные, мы Вам перезвоним</p>
             <div class="close-button" data-modal-close>
-            <svg width="30px" height="30px">
+            <svg class="close-button-icon" width="30px" height="30px">
                 <use href="./images/close-button.svg#button-close">
 
                 </use>
 
             </svg>
+            
         </div>
-            <button class="button" type="submit">Отправить</button>
+        <div class="form">
+            <form class="contact-form" autocomplete="off">
+                <div class="input">
+                    <input type="text" class="input-form" name="name" id="name" placeholder=" ">
+                    <label class="form-label" for="name">Имя</label>
+                </div>
+                <div class="input">
+                    
+                    <input type="tel" class="input-form" name="tel" id="tel" placeholder=" ">
+                    <label class="form-label" for="tel">Телефон</label>
+                </div>
+                <div class="input">
+                    
+                    <input type="email" class="input-form" name="mail" id="mail" placeholder=" " autocomplete="off">
+                    <label class="form-label" for="mail">Почта</label>
+                </div>
+                <div class="input">
+                    
+                    <textarea class="comment-textarea" name="comment" id="comment" rows="6" placeholder=" "></textarea>
+                    <label for="comment" class="textarea">Комментарий</label>
+                </div>
+
+                
+
+                
+
+                
+                
+                
+            </form>
+        </div>
+            <button class="submit button" type="submit">Отправить</button>
         </div>
     </div>
 
