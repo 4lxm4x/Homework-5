@@ -627,7 +627,7 @@ address {
 .text.address {
   display: block;
 
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-address {
@@ -898,6 +898,7 @@ address {
   bottom: 40px;
   left: 50%;
   transform: translate(-50%);
+  /* transition: transform 250ms linear; */
 }
 
 .modal-title {
